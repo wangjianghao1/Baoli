@@ -1,0 +1,82 @@
+.index{
+    width: 100%;
+    height: 100%;
+
+}
+/* 头部区域 */
+.index-header{
+    width: 100%;
+    background: #ffffff;
+    margin: 0 auto;
+    padding-top: 20px;
+    box-shadow: 2px 0 10px rgba(0,0,0,.2);
+}
+.index-header-back{
+    height: 3PX;
+    background-image: url("https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=1737401600,1722131817&fm=15&gp=0.jpg");
+
+}
+.index-logo{
+    width: 1220px;
+    height: 70px;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.index-logo-img{
+    width: 155px;
+    height: 34px;
+    /* background: yellowgreen; */
+    margin-top: 0;
+}
+.index-logo-nav{
+    margin-top: 10px;
+    font-size: 16px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    z-index: 99;
+    width: 636px;
+    margin-top: 5px;
+    color: #000000;
+    /* margin: 25px 0; */
+}
+.index-logo-nav a{
+    color: #000000;
+    font-size: 16px;
+}
+.index-logo-nav a:hover{
+    color: red;
+    border-bottom: 1px solid red;
+}
+.index-header-xiala{
+    width: 120px;
+    margin: 10 5px ;
+}
+/* banner区域 */
+.index-banner{
+    width: 1220px;
+    margin: auto;
+}
+.ant-carousel .slick-slide {
+    text-align: center;
+     height: 500px;
+    /* line-height: 500px; */
+    background: #364d79;
+    /* overflow: hidden; */
+  }
+  
+  .ant-carousel .slick-slide h3 {
+    color: #fff;
+  }
+  .ant-carousel .slick-slide{
+      width: 100%;
+      height: 100%;
+  }
+  .index-banner-img{
+      height: 100%;
+  }
+  .ant-carousel .slick-dots {
+    height: 0;
+  }
