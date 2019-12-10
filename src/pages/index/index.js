@@ -8,9 +8,7 @@ import "../../assets/css/index/index.css"
 
 
 class Index extends Component{
-    constructor(props){
-        super(props)
-    }
+   
     render(){
         return(
           <div className="index">

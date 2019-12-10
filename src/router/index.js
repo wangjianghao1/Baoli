@@ -25,14 +25,18 @@ export const adminRoutes = [{
     pathname : "/admin/personnel",
     component : Admin,
     title : "人事信息汇总",
-    // isNav : true,
-    // icon : "dashboard"
+    isNav : true,
+    icon:"unordered-list"
+    
 },{
     pathname : "/admin/inform",
     component : Inform,
-    // isNav : false
+    title:"员工个人信息",
+    isNav : true
 },{
     pathname : "/admin/setting",
     component : Setting,
     title : "设置",
+    isNav : true,
+    icon:'setting'
 }]

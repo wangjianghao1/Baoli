@@ -1,5 +1,6 @@
-import axios from "./axios"
-
-export const getUsetList=()=>{
-  return  axios.post("api/userList")
+import axios from './axios'
+export const getUserList=()=>{
+    return axios.post("/api/listcon")
+   
 }
+
