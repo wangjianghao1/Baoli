@@ -1,13 +1,21 @@
 import React ,{Component}from 'react'
-import {  } from 'antd';
+import "../../assets/css/login/login.css"
+import LoginContent from "./components/conent"
+
 
 class Login extends Component{
-    
+    constructor(props){
+        super(props)
+    }
+
 
     render(){
+      
         return(
-            <div>
-                登录页面
+            <div className="login">
+                <div className="login-ti">
+                    <LoginContent />
+                </div>
             </div>
         )
 

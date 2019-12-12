@@ -22,22 +22,17 @@ export const mainRoutes = [{
 }]
 
 export const adminRoutes = [{
-    // 配置动态路由 因为要点击编辑跳转页面
-    pathname : "/admin/personnel/:id",
+    pathname : "/admin/personnel",
     component : Admin,
     title : "人事信息汇总",
-    isNav : true,
-    icon:"unordered-list"
-    
+    // isNav : true,
+    // icon : "dashboard"
 },{
     pathname : "/admin/inform",
     component : Inform,
-    title:"员工个人信息",
-    isNav : true
+    // isNav : false
 },{
     pathname : "/admin/setting",
     component : Setting,
     title : "设置",
-    isNav : true,
-    icon:'setting'
 }]
