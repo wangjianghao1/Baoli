@@ -13,13 +13,13 @@ class Admin extends Component {
        this.props.history.push( item.key )
     }
     render() {
-      
+        // style={{background:"url(http://b.hiphotos.baidu.com/image/pic/item/908fa0ec08fa513db777cf78376d55fbb3fbd9b3.jpg)  no-repeat center"}}
         return (
             <Layout>
-                <Header className="header" style={{background:"cadetblue"}}>
+                <Header className="header" style={{background:"teal"}} >
                     <img className="admin-logo" src={logo} alt=" "/>
                     <div className="admin-title">
-                        <h1>后&nbsp;台&nbsp;管&nbsp;理</h1>
+                        <h1 style={{ fontSize:"30px"}}>后&nbsp;&nbsp;&nbsp;&nbsp;台&nbsp;&nbsp;&nbsp;&nbsp;管&nbsp;&nbsp;&nbsp;&nbsp;理</h1>
                     </div>
                 </Header>
                 <Layout>

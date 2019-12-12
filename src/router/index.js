@@ -22,7 +22,8 @@ export const mainRoutes = [{
 }]
 
 export const adminRoutes = [{
-    pathname : "/admin/personnel",
+    // 配置动态路由 因为要点击编辑跳转页面
+    pathname : "/admin/personnel/:id",
     component : Admin,
     title : "人事信息汇总",
     isNav : true,

@@ -87,8 +87,8 @@ class Admin extends Component {
           title : "操作",
           render:(text,record,index)=>(
             <Button.Group>
-              <Button type="primary">编辑</Button>
-              <Button type="danger" onClick={this.deleteClick.bind(this,record,index)}>删除</Button>
+              <Button style={{background:"#fff",color:"#006030"}}>编辑</Button>
+              <Button style={{background:"#fff",color:"#FF5151"}} onClick={this.deleteClick.bind(this,record,index)}>删除</Button>
             </Button.Group>
           )
         }
@@ -129,7 +129,9 @@ class Admin extends Component {
             <Option onClick={handleClick.bind(this)} value="jack">销售部</Option>
             <Option onClick={handleClick.bind(this)} value="Yiminghe">产品部</Option>
             <Option onClick={handleClick.bind(this)} value="chanpin">客服部</Option>
-
+            <Option onClick={handleClick.bind(this)} value="anquan">安全部</Option>
+            <Option onClick={handleClick.bind(this)} value="xingzheng">行政部</Option>
+            <Option onClick={handleClick.bind(this)} value="renshi">人事部</Option>
           </Select>
         </div>,
             <Card 
