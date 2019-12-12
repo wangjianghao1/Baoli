@@ -1,6 +1,44 @@
-import React ,{Component}from 'react'
+import React, { Component } from "react"
+import moment from "moment"
+import { 
+  Card,
+  Button,
+  Table, 
+  ConfigProvider, 
+  Tag ,
+  Select,
+  Modal ,
+  Typography,
+  message } from 'antd';
+  import zhCN from 'antd/es/locale/zh_CN';
+  import {getUserList,getDeletelist} from "../../api/api"
+  
+  const { Text } = Typography;
+const { Option } = Select;
 
-
+function handleChange(value) {
+  // console.log(`selected ${value}`);
+}
+// 点击事件 重新获取数据(修改部门名称)
+function handleClick (value) {
+  
+  console.log(value.item.props.children);
+  getUserList().then(res=>{
+    this.setState({
+      data : [...res.data.listcon],
+      total : res.data.total,
+     },()=>{
+      // 循环得到每天数据
+      for(let item of res.data.listcon){
+        // 对数据的部门进行重新赋值
+        item.Articletitle=value.item.props.children
+      }
+      this.setState({
+        loading : false
+      })
+    })
+  })
+}
 
 class Admin extends Component {
   state = {
@@ -134,12 +172,10 @@ getdata=(msg)=>{
   })
 }
 
-class Admin extends Component{
-    
-    render(){
-        return(
-          <div>人事界面</div>
-        )
+// 获取数据的生命周期
+    componentDidMount(){
+     this.getdata()
+      
     }
 }
 

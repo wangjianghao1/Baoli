@@ -2,10 +2,11 @@ import React, { Component } from "react"
 import { Layout, Menu, Icon } from 'antd';
 import {withRouter} from "react-router-dom"
 import "../../assets/css/admin/admin.css"
-import logo from "../../assets/img/logo.jpg"
-import {adminRoutes} from "../../router/index"
+import logo from "../../assets/img/logo.png"
+import {adminRoutes} from "../../router"
+
 const menus = adminRoutes.filter(item=>item.isNav === true)
-const { SubMenu } = Menu;
+
 const { Header, Content, Sider } = Layout;
 class Admin extends Component {
     handleClick=(item)=>{
@@ -30,13 +31,17 @@ class Admin extends Component {
                             style={{ height: '100%', borderRight: 0 }}
                         >
                             {
-                                menus.map(item=>{
+                            menus.map(item=>{
                                     return <Menu.Item 
                                     onClick={this.handleClick} 
-                                    key={item.pathname}
-                                    ><Icon type={item.icon} />{item.title}</Menu.Item>
+                                    key={item.pathname}>
+                                    <Icon type={item.icon} / >
+                                    {item.title}
+                                    </Menu.Item>
                                 })
                             }
+                                
+                            
                         </Menu>
                     </Sider>
                     <Layout style={{ padding: '0 24px 24px' }}>
