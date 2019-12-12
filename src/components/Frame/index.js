@@ -12,14 +12,13 @@ class Admin extends Component {
        this.props.history.push( item.key )
     }
     render() {
-        // console.log(this.props)
+      
         return (
             <Layout>
-                <Header className="header">
-                    <img className="admin-logo" src={logo}/>
+                <Header className="header" style={{background:"cadetblue"}}>
+                    <img className="admin-logo" src={logo} alt=" "/>
                     <div className="admin-title">
-                        <h1>html5-1919后台管理系统</h1>
-                        <p>快来玩呀~</p>
+                        <h1>后&nbsp;台&nbsp;管&nbsp;理</h1>
                     </div>
                 </Header>
                 <Layout>
