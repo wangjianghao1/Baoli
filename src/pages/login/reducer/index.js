@@ -1,6 +1,6 @@
 
 import {userLogin} from "../../../api/api"
-const userInfo = JSON.parse(localStorage.getItem("userInfo"))
+// const userInfo = JSON.parse(localStorage.getItem("userInfo"))
 const defaultState={
     data:{      "acatar": "http://dummyimage.com/180x150",
     "nickname": "段秀英",
@@ -26,10 +26,10 @@ const getUserInfo=(data)=>({
 })
 
 export const setUserInfo =(userInfo)=>{
+    console.log(userInfo)
     return (dispatch)=>{
-        // console.log(userInfo)
         userLogin(userInfo).then(res=>{
-            // console.log(res)
+            console.log(res)
             if(userInfo.remember){
                 localStorage.setItem("userInfo",JSON.stringify(res.data))
             }else{

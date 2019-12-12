@@ -1,7 +1,7 @@
 import axios from './axios'
 // 获取数据接口
 export const getUserList=()=>{
-    return axios.post("/api/listcon")
+    return axios.get("/api/listcon")
    
 }
 
@@ -11,5 +11,6 @@ export const getDeletelist=(id)=>{
 }
 
 export const userLogin=(userInfo)=>{
-    return axios.post("/api/user",{userInfo})
+
+    return axios.post("/api/user",userInfo)
 }

@@ -5,6 +5,7 @@ import{
     Login,//登录界面
     NotFound,//404页面
     Setting,//信息设置页面
+    // Bian,//人事编辑页
 } from "../pages/index"
 
 
@@ -32,11 +33,17 @@ export const adminRoutes = [{
     pathname : "/admin/inform",
     component : Inform,
     title:"员工个人信息",
-    // isNav : true
+    isNav : true
 },{
     pathname : "/admin/setting",
     component : Setting,
     title : "设置",
     isNav : true,
     icon:'setting'
-}]
+},
+// {
+//     pathname : "/admin/bian/:id",
+//     component : Bian,
+//     isNav : false,
+// }
+]
