@@ -49,3 +49,6 @@ table {
     background: #fff;
     
   }
+  .ant-layout-sider-children{
+	background: #ccc;
+  }

@@ -10,3 +10,6 @@ export const getDeletelist=(id)=>{
     return axios.post("/api/deleteArticle",{id})
 }
 
+export const userLogin=(userInfo)=>{
+    return axios.post("/api/user",{userInfo})
+}
