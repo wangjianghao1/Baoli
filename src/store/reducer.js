@@ -1,6 +1,6 @@
-// import {combineReducers} from "redux"
-// import contentRedux from "../pages/admin/store/conentredux"
-// const reducer=combineReducers({
-//     contentRedux
-// })
-// export default reducer
+import {combineReducers} from "redux"
+import login from "../pages/login/reducer/index"
+const reducer=combineReducers({
+    login
+})
+export default reducer

@@ -1,7 +1,5 @@
 import React ,{Component,Fragment}from 'react'
 import {Menu, Dropdown, Icon} from 'antd';
-// const { SubMenu } = Menu;
-// import "../../../assets/css/index/index.css"
 import img from "../../../assets/img/ilogo.png"
 const menu = (
     <Menu > 
@@ -34,7 +32,7 @@ class IndexHeader extends Component{
                     <div className="index-logo-img">
                         <img src={img}/>
                     </div>
-                    <div className="index-logo-nav">
+                    <div className="index-logo-nav1">
                         <Dropdown overlay={menu} placement={"bottomCenter"} >
                             <a className="ant-dropdown-link" href="#">
                                联系我们 

@@ -1,0 +1,41 @@
+.login{
+    width: 100%;
+    height: 100%;
+    background-image: url("https://sso.cfldcn.com/styles/default/login/images/oa.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.login-ti{
+    width: 1220px;
+    margin: auto;
+    position: relative;
+  
+} 
+.login-content{
+    width: 306px;
+    height: 400px;
+    /* background: #fff; */
+    background-color: rgba(
+        134, 123, 123, 0.3);
+    position: relative;
+    top: 80px;
+    left: 100px;
+    padding: 20px;
+}
+#components-form-demo-normal-login .login-form {
+    max-width: 300px;
+  }
+  #components-form-demo-normal-login .login-form-forgot {
+    float: right;
+  }
+  #components-form-demo-normal-login .login-form-button {
+    width: 100%;
+  }
+  .login-form-forgot{
+    margin-left: 110px;
+  }
+
+  .login-logo{
+      width: 100%;
+      margin-bottom: 20px;
+  }
