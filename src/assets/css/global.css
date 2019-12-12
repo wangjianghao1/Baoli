@@ -52,3 +52,5 @@ table {
   .ant-layout-sider-children{
 	background: #ccc;
   }
+  svg{
+	  margin-bottom: 6px}

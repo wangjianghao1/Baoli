@@ -87,7 +87,7 @@ class Admin extends Component {
           title : "操作",
           render:(text,record,index)=>(
             <Button.Group>
-              <Button style={{background:"#fff",color:"#006030"}}>编辑</Button>
+              <Button style={{background:"#fff",color:"#006030"}} onClick={this.bianClick.bind(this,record.id,record)}>编辑</Button>
               <Button style={{background:"#fff",color:"#FF5151"}} onClick={this.deleteClick.bind(this,record,index)}>删除</Button>
             </Button.Group>
           )
@@ -119,7 +119,12 @@ class Admin extends Component {
       }
     })
   }
-
+// 编辑按钮事件 
+    bianClick=(id,text)=>{
+    this.props.history.push(`/admin/bian/${id}`,text)
+    console.log(this.props.history)
+    
+    }
 
     render() {
         return (
