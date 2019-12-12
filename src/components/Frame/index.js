@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { Layout, Menu, Icon } from 'antd';
 import {withRouter} from "react-router-dom"
 import "../../assets/css/admin/admin.css"
-import logo from "../../assets/img/logo.png"
+import logo from "../../assets/img/logo.jpg"
 import {adminRoutes} from "../../router"
 
 const menus = adminRoutes.filter(item=>item.isNav === true)

@@ -1,5 +1,5 @@
 
-import {userLogin} from "../../../api/api"
+// import {userLogin} from "../../../api/api"
 // const userInfo = JSON.parse(localStorage.getItem("userInfo"))
 const defaultState={
     data:{     "acatar": "http://dummyimage.com/300x600",
@@ -9,34 +9,34 @@ const defaultState={
     "userStatus": 1}
    
 }
-const GET_USER_INFO="GET_USER_INFO"
+// const GET_USER_INFO="GET_USER_INFO"
 
-export default(state=defaultState,action)=>{
-    switch(action.type){
-        case GET_USER_INFO:
-            return {data:action.data}
-        default :
-            return state
-    }
-}
+// export default(state=defaultState,action)=>{
+//     switch(action.type){
+//         case GET_USER_INFO:
+//             return {data:action.data}
+//         default :
+//             return state
+//     }
+// }
 
-const getUserInfo=(data)=>({
-    type : GET_USER_INFO,
-    data
-})
+// const getUserInfo=(data)=>({
+//     type : GET_USER_INFO,
+//     data
+// })
 
-export const setUserInfo =(userInfo)=>{
-    return (dispatch)=>{
-        // console.log(userInfo)
-        userLogin(userInfo).then(res=>{
-            // console.log(res)
-            if(userInfo.remember){
-                localStorage.setItem("userInfo",JSON.stringify(res.data))
-            }else{
-                sessionStorage.setItem("userInfo",JSON.stringify(res.data))
-            }
-            dispatch(getUserInfo(res.data))
-        })
+// export const setUserInfo =(userInfo)=>{
+//     return (dispatch)=>{
+//         // console.log(userInfo)
+//         userLogin(userInfo).then(res=>{
+//             // console.log(res)
+//             if(userInfo.remember){
+//                 localStorage.setItem("userInfo",JSON.stringify(res.data))
+//             }else{
+//                 sessionStorage.setItem("userInfo",JSON.stringify(res.data))
+//             }
+//             dispatch(getUserInfo(res.data))
+//         })
         
-    }
-}
+//     }
+// }
