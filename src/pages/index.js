@@ -5,6 +5,10 @@ import Login from "./login/index"
 import NotFound from "./notFound/index"
 import Setting from "./setting/index"
 // import Bian from './bianji/index'
+import SettingSett from "./setting/components/sett"
+import SettingScientific from "./setting/components/scientific"
+import SettingManaage from "./setting/components/manage"
+
 
 export {
     Admin,
@@ -14,4 +18,8 @@ export {
     NotFound,
     Setting,
     // Bian
+    SettingManaage,
+    SettingScientific,
+    SettingSett
+
 }

@@ -6,12 +6,38 @@ import{
     NotFound,//404页面
     Setting,//信息设置页面
     // Bian,//人事编辑页
-} from "../pages/index"
+    SettingManaage,
+    SettingScientific,
+    SettingSett
 
+} from "../pages"
+
+export const settingRoutes =[{
+    pathname:"/admin/setting/sett",
+    component:SettingSett,
+    title:"基本设置",
+    isNav:true
+},
+{
+    pathname:"/admin/setting/scientific",
+    component:SettingScientific,
+    title:"系统管理",
+    isNav:true
+},
+{
+    pathname:"/admin/setting/mamaaage",
+    component:SettingManaage,
+    title:"数据统计",
+    isNav:true
+}
+
+]
 
 export const mainRoutes = [{
     pathname : "/login",
-    component : Login
+    component : Login,
+    title : "人事信息汇总",
+    isNav : true,
 },
 {
     pathname:"/index",

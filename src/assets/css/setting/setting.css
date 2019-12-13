@@ -1,3 +1,18 @@
 .setting{
-    height: 400px;
+position: relative;
+
+
+
+
+}
+.manaage{
+    height: 100px;
+    margin-top: 50px;
+}
+
+
+/* 基本设置页面 */
+.setting-sett{
+    height: 100%;
+    
 }
