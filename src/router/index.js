@@ -33,7 +33,7 @@ export const adminRoutes = [{
     pathname : "/admin/inform",
     component : Inform,
     title:"员工个人信息",
-    isNav : true
+    // isNav : true
 },{
     pathname : "/admin/setting",
     component : Setting,

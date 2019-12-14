@@ -5,9 +5,13 @@ export const getUserList=()=>{
    
 }
 
-// 删除数据接口
+// 人事页删除数据接口
 export const getDeletelist=(id)=>{
     return axios.post("/api/deleteArticle",{id})
+}
+// 头部员工信息接口
+export const getYgongList=()=>{
+    return axios.post("/api/top")
 }
 
 export const userLogin=(userInfo)=>{

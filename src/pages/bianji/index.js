@@ -1,5 +1,5 @@
 import React ,{Component}from 'react'
-import { Card,Button,message } from 'antd';
+import { Button,message, Form, DatePicker,Input } from 'antd';
 import moment from "moment"
 import '../../assets/css/bianji/bianji.css'
 
@@ -7,19 +7,47 @@ import '../../assets/css/bianji/bianji.css'
 class Bian extends Component{
    
     render(){
+// form表单需要的提取
+// const { RangePicker } = DatePicker;
+const { getFieldDecorator } = this.props.form;
+// const rangeConfig = {
+//   rules: [{ type: 'array', required: true, message: 'Please select time!' }],
+// };
+
       // 获取传递过来的数据
       const state=this.props.history.location.state
         return(
           <>
-          <Card title="员工编辑" bordered={false} style={{ width: "100% ",height:"55px",background:"pink" }} />
-          {/* 将获取的数据进行渲染 */}
-          <h5>姓名</h5>  <span className="span_state" contentEditable >{state.author}</span><br/>
-          <h5>工号</h5>  <span className="span_state" contentEditable> {state.id}</span><br/>
-          <h5>部门</h5> <span className="span_state" contentEditable> {state.Articletitle}</span><br/>
-          <h5>入职时间</h5> <span className="span_state" contentEditable>{moment(state.Creationtime).format("YYYY-MM-DD")}</span><br/>
-          <Button onClick={this.handleQuxiao} type="primary" style={{margin:"5px 20px 0px 0px"}}>取消</Button>
-          <Button onClick={this.handleClick} type="primary" style={{marginTop:"5px"}}>完成</Button>
+            <Form onSubmit={this.handleSubmit}>
+              
+                <Form.Item label="姓名">
+              {getFieldDecorator('text', {
+                
+              })(<Input placeholder={state.author} style={{width:"50%"}} />)}
+            </Form.Item> 
+            <Form.Item label="工号">
+              {getFieldDecorator('number', {
+              })(<Input placeholder={state.id} style={{width:"50%"}} />)}
+            </Form.Item> 
+            <Form.Item label="部门">
+              {getFieldDecorator('string', {
+              })(<Input placeholder={state.Articletitle} style={{width:"50%"}} />)}
+            </Form.Item>   
+            <Form.Item label="入职时间">
+              {getFieldDecorator('number1', {
+              })(<Input placeholder={moment(state.Creationtime).format("YYYY-MM-DD")} style={{width:"50%"}} />)}
+            </Form.Item> 
+            <Form.Item label="更改时间" hasFeedback validateStatus="success" style={{width:"50%"}}>
+                <DatePicker placeholder="请输入时间" style={{ width: '100%' }} />
+            </Form.Item>
+
+            <Button onClick={this.handleQuxiao} type="primary" style={{margin:"5px 20px 0px 0px"}}>重置</Button> 
+            <Button type="primary" htmlType="submit" onClick={this.handleClick}>完成</Button>
+          
+            </Form>
           </>
+          
+          
         )
     }
     // 修改成功（跳出弹窗，返回人事页面）
@@ -31,7 +59,8 @@ class Bian extends Component{
     }
     // 取消按钮(重新渲染页面)
     handleQuxiao=()=>{
-        
+      
+    
       }
 
     }
@@ -39,4 +68,4 @@ class Bian extends Component{
 
 
 
-export default Bian
+export default  Form.create()(Bian)

@@ -1,0 +1,13 @@
+.left_baoxian,.right_baoxian{
+    text-align: center;
+}
+.left_qian,.right_qian{
+    width:350px;
+    margin-left:94px;
+    padding-left:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+.ant-layout-content{
+    position: relative;
+}
