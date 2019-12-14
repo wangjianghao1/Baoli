@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { Layout, Menu, Icon } from 'antd';
 import {withRouter} from "react-router-dom"
 import "../../assets/css/admin/admin.css"
-import logo from "../../assets/img/ilogo.png"
+// import logo from "../../assets/img/ilogo.png"
 import {adminRoutes} from "../../router"
 
 const menus = adminRoutes.filter(item=>item.isNav === true)
@@ -16,19 +16,19 @@ class Admin extends Component {
     
         return (
             <Layout>
-                <Header className="header"  style={{background:"#E8FFF5"}} >
-                    <img className="admin-logo" src={logo} alt=" "/>
+                <Header className="header"  style={{background:"#3C3C3C"}} >
+                    {/* <img className="admin-logo" src={logo} alt=" "/> */}
                     <div className="admin-title">
-                        <h1 style={{ fontSize:"30px", color:"#333"}}>后&nbsp;&nbsp;&nbsp;&nbsp;台&nbsp;&nbsp;&nbsp;&nbsp;管&nbsp;&nbsp;&nbsp;&nbsp;理</h1>
+                        <h1 style={{ fontSize:"30px", color:"#fff"}}>后&nbsp;&nbsp;&nbsp;&nbsp;台&nbsp;&nbsp;&nbsp;&nbsp;管&nbsp;&nbsp;&nbsp;&nbsp;理</h1>
                     </div>
                 </Header>
                 <Layout>
-                    <Sider width={200} style={{ background: '#fff' }}>
+                    <Sider width={200}>
                         <Menu
                             mode="inline"
                             defaultSelectedKeys={[this.props.location.pathname]}
                             defaultOpenKeys={['sub1']}
-                            style={{ height: '100%', borderRight: 0 ,background:"#ccc"}}
+                            style={{ height: '100%', borderRight: 0 ,background:"#4F4F4F"}}
                         >
                             {
                             menus.map(item=>{
