@@ -196,6 +196,7 @@ import {
     })
   }
 
+<<<<<<< Updated upstream
   // 获取数据的生命周期
       componentDidMount(){
       this.getdata()
@@ -204,3 +205,8 @@ import {
   }
 
   export default Admin
+=======
+
+
+export default Admin 
+>>>>>>> Stashed changes
